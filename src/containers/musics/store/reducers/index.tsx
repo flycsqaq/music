@@ -4,7 +4,6 @@ import { rankReducer } from "./rank";
 import { searchReducer } from "./search";
 import { singerReducer } from "./singer";
 import { songReducer } from "./song";
-import { playReducer } from "./playList";
 
 const musicReducer = {
   menu: menuReducer,
@@ -13,7 +12,6 @@ const musicReducer = {
   search: searchReducer,
   singer: singerReducer,
   song: songReducer,
-  play: playReducer
 }
 
 export default musicReducer

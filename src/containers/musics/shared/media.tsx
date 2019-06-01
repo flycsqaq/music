@@ -43,24 +43,24 @@ function MediaControlCard({ img, url }: any) {
 
   const classes = useStyles({});
   const theme = useTheme();
-  const mapState = useCallback(
-    state => ({
-      current: state.play.currentMusic,
-      list: state.play.musicList
-    }), []
-  )
-  const state = useMappedState(mapState)
+  // const mapState = useCallback(
+  //   state => ({
+  //     current: state.play.currentMusic,
+  //     list: state.play.musicList
+  //   }), []
+  // )
+  // const state = useMappedState(mapState)
 
-  function Info() {
-    if (state.current) {
-      return (
-        <div>
-          {state.current.fileName}
-        </div>
-      )
-    }
-    return null
-  }
+  // function Info() {
+  //   if (state.current) {
+  //     return (
+  //       <div>
+  //         {state.current.fileName}
+  //       </div>
+  //     )
+  //   }
+  //   return null
+  // }
   function ImageCard() {
     if (url) {
       return (
@@ -78,7 +78,7 @@ function MediaControlCard({ img, url }: any) {
   return (
     <Card className={classes.card}>
       <div className={classes.details}>
-      <Info />
+      {/* <Info /> */}
         <CardContent className={classes.content}>
           <Typography component="h5" variant="h5">
             Live From Space
