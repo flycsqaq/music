@@ -34,6 +34,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     text: {
       position: 'relative',
       textAlign: 'center'
-    }
+    }, 
+
   }),
 );

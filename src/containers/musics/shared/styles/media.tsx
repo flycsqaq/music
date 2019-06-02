@@ -1,6 +1,8 @@
 import { Theme, createStyles, withStyles, makeStyles, useTheme } from '@material-ui/core/styles';
+import { fade } from '@material-ui/core/styles/colorManipulator';
+import Slider from '@material-ui/lab/Slider';
 
-const useStyles = makeStyles((theme: Theme) =>
+export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     card: {
       display: 'flex',
@@ -8,9 +10,11 @@ const useStyles = makeStyles((theme: Theme) =>
     details: {
       display: 'flex',
       flexDirection: 'column',
+      flex: '1 0 auto'
     },
     content: {
       flex: '1 0 auto',
+      justifyContent: 'center'
     },
     cover: {
       width: 151,
@@ -20,19 +24,25 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       paddingLeft: theme.spacing(1),
       paddingBottom: theme.spacing(1),
+      justifyContent: 'center'
     },
     playIcon: {
       height: 38,
       width: 38,
     },
-    slider: {
-      width: 300,
-      padding: 24,
+    floatRight: {
+      float: 'right'
     },
+    pag: {
+      textAlign: 'center'
+    },
+    slider: {
+      padding: theme.spacing(0, 3)
+    }
   }),
 );
 
-const StyledSlider = withStyles({
+export const StyledSlider = withStyles({
   thumb: {
     height: 24,
     width: 24,
