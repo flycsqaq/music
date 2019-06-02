@@ -9,7 +9,7 @@ import { Song, MenuInfo, RankInfo, SingerClasses } from '../../models/state';
 import MenuShow from '../../shared/menu';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import { Grid } from '../../../../../node_modules/@material-ui/core';
+import { Grid } from '@material-ui/core';
 import SongRank from '../../shared/songRank';
 import SingerClass from '../../shared/singerClass';
 import MoreIcon from '@material-ui/icons/MoreVertRounded';

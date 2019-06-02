@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback } from 'react'
 import {useDispatch, useMappedState} from 'redux-react-hook'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import { Grid } from '../../../../../node_modules/@material-ui/core';
+import { Grid } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { RankInfo } from '../../models/state';
 import { getRankList } from '../../store/actions/rank';

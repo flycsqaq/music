@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback } from 'react'
 import {useDispatch, useMappedState} from 'redux-react-hook'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import { Grid } from '../../../../../node_modules/@material-ui/core';
+import { Grid } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { getMenuList } from '../../store/actions/menu';
 import MenuShow from '../../shared/menu';
@@ -35,7 +35,7 @@ const MenuList = (props: any) => {
   return (
     <Grid container className={classes.root} spacing={5}>
       <Grid item>
-        <Typography variant="h5" component="h1">歌单</Typography>
+        <Typography variant="h5" component="h1">歌坕</Typography>
         <Grid container spacing={3}>
           {state.map((menu: MenuInfo, index: number) => (
               <Grid key={index} item xs={4}>

@@ -135,7 +135,26 @@ export interface SingerState {
   singerInfo: { [propName: string]: SingerInfo } 
 }
 
-export interface PlayMusic extends SongInfo {}
+export type PlayMusic = Song | SongInfo
+
+export type RecentlyMusicState = Array<PlayMusic>
+
+export type MusicCollection = Array<PlayMusic>
+
+export interface MusicCollectionState {
+  [name: string]: MusicCollection
+}
+
+export interface MenuCollectonState {
+  [specialid: string]: PlayMusic[]
+}
+
+export interface PlayState {
+  playList: string
+  hash: string
+  tag: string
+  state: boolean
+}
 
 export interface MusicStore {
   search: SearchState,
@@ -144,5 +163,8 @@ export interface MusicStore {
   rank: RankState
   song: SongState
   singer: SingerState,
+  collectionList: MusicCollectionState,
+  menuCollectionList: MenuCollectonState,
+  play: PlayState
 } 
 

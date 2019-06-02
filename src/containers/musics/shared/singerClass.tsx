@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paper } from '../../../../node_modules/@material-ui/core';
+import { Paper } from '@material-ui/core';
 import { changeImgUrl } from '../utils/imgUrl';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom'

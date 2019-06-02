@@ -5,16 +5,24 @@ import { GET_MENU_LIST, GET_MENU_SONGS } from '../../models/constants';
 
 export function* getMenuListFlow(): Iterable<any> {
   while(true) {
-    yield take(GET_MENU_LIST)
-    const res = yield call(api.menuList)
-    yield put(getMenuList(res.data.data.list.info, true))
+    try {
+      yield take(GET_MENU_LIST)
+      const res = yield call(api.menuList)
+      yield put(getMenuList(res.data.data.list.info, true))
+    } catch(e) {
+
+    }
   }
 }
 
 export function* getMenuSongsFlow(): Iterable<any> {
   while(true) {
-    const request = yield take(GET_MENU_SONGS)
-    const res = yield call(api.menuSongs, request.menuSpecialid)
-    yield put(getMenuSongs(request.menuSpecialid, res.data.data.list.info, true))
+    try {
+      const request = yield take(GET_MENU_SONGS)
+      const res = yield call(api.menuSongs, request.menuSpecialid)
+      yield put(getMenuSongs(request.menuSpecialid, res.data.data.list.info, true))
+    } catch(e) {
+      
+    }
   }
 }

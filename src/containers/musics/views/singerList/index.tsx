@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback } from 'react'
 import {useDispatch, useMappedState} from 'redux-react-hook'
 import SingerShow from '../../shared/singerShow';
-import { Grid } from '../../../../../node_modules/@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { SingerClassSingerInfo } from '../../models/state';
 import { getSingerClassSingerList } from '../../store/actions/singer';
 

@@ -2,7 +2,7 @@ import React, { useEffect, useCallback } from 'react'
 import {useDispatch, useMappedState} from 'redux-react-hook'
 import { getNewSongs } from '../../store/actions/new';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import { Grid } from '../../../../../node_modules/@material-ui/core';
+import { Grid } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { Song } from '../../models/state';
 import SongShow from '../../shared/songShow';

@@ -87,6 +87,63 @@ export interface SearchSongs extends Update {
 }
 
 export type SearchActions = SearchSongs
+// play
+export interface AddRecentlyMusic {
+  type: constants.ADD_RECENTLY_MUSIC
+  song: Song | SongInfo
+}
+
+export interface DeleteRecentlyMusic {
+  type: constants.DELETE_RECENTLY_MUSIC
+  hash: string
+}
+
+export type RecentlyActions = AddRecentlyMusic | DeleteRecentlyMusic
+
+export interface AddCollection {
+  type: constants.ADD_COLLECTION
+  name: string
+}
+
+export interface DeleteCollection {
+  type: constants.DELETE_COLLECTION
+  name: string
+}
+
+export interface AddSongCollection {
+  type: constants.ADD_SONG_COLLECTION
+  name: string
+  hash: string
+}
+
+export interface DeleteSongCollection {
+  type: constants.DELETE_SONG_COLLECTION
+  name: string
+  hash: string
+}
+
+export type MusicCollectionActions = AddCollection | DeleteCollection | AddSongCollection | DeleteSongCollection
+
+export interface AddMenuCollection {
+  type: constants.ADD_MENU_COLLECTION
+  specialid: number
+}
+
+export interface DeleteMenuCollection {
+  type: constants.DELETE_MENU_COLLECTION
+  specialid: number
+}
+
+export type MenuCollectionActions = AddMenuCollection | DeleteMenuCollection
+
+export interface ChangePlay {
+  type: constants.CHANGE_PLAY
+  name: string
+  hash: string
+  tag: string
+  state: boolean
+}
+export type playActions = ChangePlay
 
 // musicActions
 export type musicActions = NewActions | MenuActions | RankActions | SingleActions | SongActions | 
