@@ -18,7 +18,6 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MusicIcon from '@material-ui/icons/MusicVideo';
 import { makeStyles, Theme, useTheme } from '@material-ui/core/styles';
-import MediaControlCard from '../containers/musics/shared/media'
 import { history } from '../core/store/history'
 
 const drawerWidth = 240;
@@ -96,16 +95,8 @@ export default function AppRouter(props: any) {
   function handleDrawerClose() {
     setOpen(false);
   }
-  function Media() {
-    return (
-      <AppBar position="fixed" className={classes.footerBar}>
-        <MediaControlCard />
-      </AppBar>
-    )
-  }
   return (
     <Router history={history}>
-      <Media />
       <div className={classes.root}>
         <CssBaseline />
         <AppBar

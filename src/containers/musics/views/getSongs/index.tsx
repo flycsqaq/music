@@ -14,6 +14,7 @@ export default () => {
   )
   const state = useMappedState(mapState)
   const dispatch = useDispatch()
+  // 不知道为什么会提交两次
 
   useEffect(
     () => {
@@ -72,7 +73,7 @@ export default () => {
       updateCollectionSongInfo(combine[key])
     })
   }
-  const getIntervalId = setInterval(getSongsInterator, 500)
-  const updateIntervalId = setInterval(updateCollections, 500)
+  const getIntervalId = setInterval(getSongsInterator, 1000)
+  const updateIntervalId = setInterval(updateCollections, 1000)
   return null
 }

@@ -2,7 +2,6 @@ import React, { useEffect, useCallback } from 'react'
 import {useDispatch, useMappedState} from 'redux-react-hook'
 import { getSongInfo, getSongLrc } from '../../store/actions/song';
 import { changeImgUrl } from '../../utils/imgUrl';
-import MediaControlCard from '../../shared/media'
 
 const SongInfo = (props: any) => {
   const mapState = useCallback(
@@ -52,19 +51,8 @@ const SongInfo = (props: any) => {
     }
     return null
   }
-  function MediaCard() {
-    if (state.info) {
-      return (
-        <MediaControlCard url={state.info.url} img={changeImgUrl(state.info['album_img'])} />
-      )
-    }
-    return (
-      <MediaControlCard />
-    )
-  }
   return (
     <div>
-      <MediaCard />
       <Info />
       <Img />
       <Lrc />
